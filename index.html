@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Ecosystem</title>
+  <link rel="shortcut icon" href="C:\Users\tkaji\Desktop\ram\image\ourlogo.jpg" type="image">
+
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+
+    body {
+      background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(66, 99, 45) 35%, rgba(0, 212, 255, 1) 100%);
+      position: relative; 
+    }
+    h1, h2, h3, p {
+      color: white; 
+    }
+
+    h1 {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    h2 {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    }
+
+    .video-container {
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .video {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .textarea {
+      height: 300px;
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 1px solid #ddd;
+      resize: vertical;
+    }
+
+    section.mt-4 {
+      margin-top: 80px; 
+    }
+
+    .class {
+      font-size: xx-large;
+    }
+
+    .bg-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .bg-card:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .youtube-thumbnail {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.8;
+      animation: twinkle 1.5s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from {
+        opacity: 0.5;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .gallery-container {
+      perspective: 1000px;
+      width: 400px;
+      height: 400px;
+      cursor: grab;
+  }
+  
+  .gallery-container:active {
+      cursor: grabbing;
+  }
+  
+  .gallery {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease-out;
+  }
+  
+  .gallery img {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gallery img:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
+  .gallery img:nth-child(2) { transform: rotateY(72deg) translateZ(300px); }
+  .gallery img:nth-child(3) { transform: rotateY(144deg) translateZ(300px); }
+  .gallery img:nth-child(4) { transform: rotateY(216deg) translateZ(300px); }
+  .gallery img:nth-child(5) { transform: rotateY(288deg) translateZ(300px); }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+.return-back {
+    text-decoration: none;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.return-back:hover {
+    background-color: #d32f2f;
+}
+
+.content {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .return-back {
+        margin-top: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+}
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2a2a2a;
+    color: white;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+
+.sticky-header .btnss {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.sticky-header .btnss ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.sticky-header .btnss li {
+    display: inline-block;
+}
+
+.sticky-header .btnss a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sticky-header .btnss a:hover {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+.gttt{
+ 
+ background-color:#F0E68C; 
+ color: white; 
+ padding: 100px;
+ text-align: center; 
+ font-family: Arial, sans-serif; 
+ border-radius: 8px;
+
+}
+
+@media only screen and (max-width:575px ){
+  .sticky-header .btnss a {
+    color: white;
+    text-decoration: none;
+    font-size:7px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  margin: 0;
+  padding: 0;
+  left: 20px;
+}
+.sticky-header .btnss a:hover {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+}
+.la{
+  font-size: 2rem;
+}
+.laa{
+  font-size: 1rem;
+}
+.gg{
+  width: 200px;
+  height: 200px;
+  
+}
+
+.nd{
+  width: 100px;
+  height: 100px;
+  margin-left: 50px;
+ 
+ }
+ .nt{
+  font-size: 12px;
+  margin-left: 50px;
+ }
+ .gallery-container{
+  .gallery-container {
+    width: 90%;  
+    height: 300px;  
+  }
+
+  .gallery img {
+    width: 120px;  
+    height: 120px;  
+  }
+
+  
+  .gallery img:nth-child(1) { transform: rotateY(0deg) translateZ(150px); }
+  .gallery img:nth-child(2) { transform: rotateY(72deg) translateZ(150px); }
+  .gallery img:nth-child(3) { transform: rotateY(144deg) translateZ(150px); }
+  .gallery img:nth-child(4) { transform: rotateY(216deg) translateZ(150px); }
+  .gallery img:nth-child(5) { transform: rotateY(288deg) translateZ(150px); }
+}
+#gs{
+position: relative;
+top: 2px;
+left: 10px;
+font-size: 1rem;
+color: #2a2a2a;
+}
+.la{
+  font-size: 2.5rem;
+}
+.laa{
+  font-size: 1.5rem;
+}
+    
+}
+@media only screen and (min-width: 575px) and (max-width: 1280px) {
+  #gs{
+position: relative;
+top: 2px;
+left: 10px;
+font-size: 1rem;
+color: #2a2a2a;
+} 
+  .toggle-button {
+    width: 250px;
+    height: 30px;
+    transition: background-color 0.3s;
+}
+.tt{
+ text-align: center;
+}
+
+.toggle-button:hover {
+    background-color: #4CAF50;
+}
+  .sticky-header .btnss a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sticky-header .btnss a:hover {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+  }
+
+ 
+
+ 
+
+  .nd {
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+  }
+
+  .nt {
+    font-size: 14px;
+    margin-left: 30px;
+  }
+
+  .gallery-container {
+    width: 90%;  
+    height: 250px;
+  }
+
+  .gallery img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .gallery img:nth-child(1) { 
+    transform: rotateY(0deg) translateZ(150px); 
+  }
+  .gallery img:nth-child(2) { 
+    transform: rotateY(72deg) translateZ(150px); 
+  }
+  .gallery img:nth-child(3) { 
+    transform: rotateY(144deg) translateZ(150px); 
+  }
+  .gallery img:nth-child(4) { 
+    transform: rotateY(216deg) translateZ(150px); 
+  }
+  .gallery img:nth-child(5) { 
+    transform: rotateY(288deg) translateZ(150px); 
+  }
+
+ 
+
+ 
+}
+.toggle-button {
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #4CAF50; 
+}
+
+
+
+.gg {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+}
+#gs{
+position: absolute;
+left: 50px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <nav class="btnss">
+        <ul>
+          
+          <img src="C:\Users\tkaji\Desktop\ram\image\ourlogo.jpg" alt="img" class="logo" ><pre id="gs">Our Ecosystem</pre>
+ 
+
+          <li><a href="envi.html">Pollution</a></li>
+
+          <li><a href="layer.html">Ozone Layer</a></li>
+          <li><a href="jonnyy.html">Enviromental Awareness</a></li>
+
+          <li><a href="what.html">What we do</a></li>
+
+       
+            <li><a href="jonny.html">3D model of Earth</a></li>
+
+            
+        </ul>
+    </nav>
+    
+  </div>
+  
+</header>
+  <main>
+    
+    
+    <section class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+         <b>   <h1 class="la text-5xl  title-font text-White-500 tracking-widest" >"Environmental Awareness"</h1>
+          </b>  
+            <p class=" laa text-2xl leading-relaxed mb-4">              Discover, learn, and take action to protect our planet. From preserving Earth's natural beauty to tackling pollution and exploring the vast wonders of space, our mission is to inspire awareness and solutions for a sustainable future. Together, we can create a cleaner, greener world for generations to come.
+            </p>
+            
+          
+           
+            <div class="flex">
+              <button class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" onclick='scrollToSection("target1");'>GetStart</button>
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                </svg>
+            </div>
+          </div>
+          <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="C:\Users\tkaji\Desktop\ram\image\lw.jpg">
+        </div>
+      </div>
+    </section>
+   
+
+    <!-- Optional Section for Learning More -->
+    <section id="learn-more" class="bg-white py-24">
+      <div class="container px-5 mx-auto text-center">
+        <h3 class="text-3xl font-semibold text-indigo-600 mb-4">Join Us in Making a Difference</h3>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          We are dedicated to creating a lasting impact. Get involved today and be part of the solution for a cleaner, more sustainable future!
+        </p>
+        <a href="#about" class="inline-flex items-center px-8 py-4 bg-indigo-600 text-white font-semibold text-lg rounded-md hover:bg-indigo-700 transition-all duration-300">
+          Contact Us
+        </a>
+      </div>
+    </section>
+    
+   
+    
+    <section style="padding: 40px; background-color: #f4f9f4;" id="target1">
+      <h1 style="text-align: center; font-size: 36px; color: #4CAF50;">Green Technologies and Innovations</h1>
+      <p style="text-align: center; font-size: 18px; color: #333; line-height: 1.6;">
+          Green technologies and innovations are revolutionizing the way we approach energy consumption, waste management, and sustainability. These technologies not only aim to reduce the negative environmental impact but also contribute to a cleaner, more sustainable future.
+      </p>
+      
+      <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+          <div style="width: 45%; text-align: center;">
+              <h2 style="font-size: 28px; color: #333;">Renewable Energy Sources</h2>
+              <img src="C:\Users\tkaji\Desktop\ram\image\re.jpeg" alt="Renewable Energy" style="width: 100%; border-radius: 8px;">
+              <p style="font-size: 16px; color: #555; margin-top: 10px;">
+                  Solar, wind, hydro, and geothermal energy are some of the primary sources of renewable energy. These technologies help reduce dependency on fossil fuels and lower greenhouse gas emissions.
+              </p>
+          </div>
+
+          <div style="width: 45%; text-align: center;">
+              <h2 style="font-size: 28px; color: #333;">Electric Vehicles (EVs)</h2>
+              <img src="C:\Users\tkaji\Desktop\ram\image\ev.jpg" alt="Electric Vehicle" style="width: 100%; border-radius: 8px;">
+              <p style="font-size: 16px; color: #555; margin-top: 10px;">
+                  Electric vehicles offer a cleaner alternative to traditional gasoline-powered cars. They help reduce air pollution and are powered by renewable energy, making them more environmentally friendly.
+              </p>
+          </div>
+      </div>
+
+      <div style="margin-top: 50px; text-align: center;">
+          <h2 style="font-size: 28px; color: #333;">Sustainable Agriculture Innovations</h2>
+          <img src="C:\Users\tkaji\Desktop\ram\image\se.jpg" alt="Sustainable Agriculture" style="width: 80%; border-radius: 8px;">
+          <p style="font-size: 16px; color: #555; margin-top: 10px; line-height: 1.6;">
+              Sustainable agriculture involves innovative practices such as vertical farming, hydroponics, and aquaponics to grow food in environmentally friendly ways. These technologies use fewer resources, minimize waste, and reduce carbon footprints.
+          </p>
+      </div>
+
+      <div style="display: flex; justify-content: space-around; margin-top: 50px;">
+          <div style="width: 45%; text-align: center;">
+              <h2 style="font-size: 28px; color: #333;">Waste Management Technologies</h2>
+              <img src="C:\Users\tkaji\Desktop\ram\image\wm.jpg" alt="Waste Management" style="width: 100%; border-radius: 8px;">
+              <p style="font-size: 16px; color: #555; margin-top: 10px;">
+                  Technologies like waste-to-energy, recycling, and composting are helping to reduce landfill waste, generate energy, and recycle materials into new products, promoting a circular economy.
+              </p>
+          </div>
+
+          <div style="width: 45%; text-align: center;">
+              <h2 style="font-size: 28px; color: #333;">Smart Grids and Energy Storage</h2>
+              <img src="C:\Users\tkaji\Desktop\ram\image\sg.jpg" alt="Smart Grids" style="width: 100%; border-radius: 8px;">
+              <p style="font-size: 16px; color: #555; margin-top: 10px;">
+                  Smart grids optimize the distribution of electricity using real-time data, while energy storage solutions help store renewable energy for later use. These innovations enhance energy efficiency and reduce waste.
+              </p>
+          </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 50px;">
+          <h2 style="font-size: 28px; color: #333;">The Future of Green Innovation</h2>
+          <p style="font-size: 16px; color: #555; line-height: 1.6; width: 80%; margin: 0 auto;">
+              The future of green technologies promises even greater advancements, such as carbon capture and storage (CCS) systems, advanced biofuels, and smart cities that integrate energy-efficient technologies. As innovations continue to evolve, they offer new opportunities to combat climate change and build a sustainable, low-carbon future.
+          </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h2 class="text-2xl font-medium title-font mb-4 text-white-900">Discover Topics</h2>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 lg:w-1/4 md:w-1/2">
+            <div class="h-full flex flex-col items-center text-center">
+              <img alt="team" class="nd flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="C:\Users\tkaji\Desktop\ram\image\ee.jpg">
+              <div class="w-full">
+                <button class=" nt bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onclick="window.open('iindex.html')">Forest</button>
+                
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/4 md:w-1/2">
+            <div class="h-full flex flex-col items-center text-center">
+              <img alt="team" class=" nd flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="C:\Users\tkaji\Desktop\ram\image\eee.jpg">
+              <div class="w-full">
+                <button class=" nt bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onclick="window.open('pindex.html')">Biodiversity</button>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/4 md:w-1/2">
+            <div class="h-full flex flex-col items-center text-center">
+              <img alt="team" class=" nd flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="C:\Users\tkaji\Desktop\ram\image\k.jpg">
+              <div class="w-full">
+                <button class=" nt bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onclick="window.open('tkb.html')">Water</button>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/4 md:w-1/2">
+            <div class="h-full flex flex-col items-center text-center">
+              <img alt="team" class=" nd flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="C:\Users\tkaji\Desktop\ram\image\oo.jpg">
+              <div class="w-full">
+                <button class=" nt bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onclick="window.open('cloud.html')">Air</button>
+                
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+ 
+
+<section>
+
+
+
+
+  <center>
+    <div class="gallery-container">
+      <div class="gallery">
+        <img src="C:\Users\tkaji\Desktop\ram\image\j.jpg" alt="Mercury" style="margin-top: 3rem;">
+        <img src="C:\Users\tkaji\Desktop\ram\image\mr.jpg" alt="Mars" style="margin-top: 3rem;">
+        <img src="C:\Users\tkaji\Desktop\ram\image\n.jpg" alt="Neptun" style="margin-top: 3rem;">
+        <img src="C:\Users\tkaji\Desktop\ram\image\s.jpg" alt="Saturn" style="margin-top: 3rem;">
+        <img src="C:\Users\tkaji\Desktop\ram\image\v.jpg" alt="Venus" style="margin-top: 3rem;">
+      </div>
+  </div>
+</center>
+</section>
+<section>
+
+  <div>
+    <center>
+      <h1 class="text-x5">3D image rotating gallery</h1>
+    
+    </center>
+    </div>
+</section>
+
+<section class="mt-10 flex flex-wrap -mx-4">
+  <div class="w-full lg:w-1/2 mb-10 px-4">
+    <img src="C:\Users\tkaji\Desktop\ram\image\laija.jpg" alt="Galaxy" class="object-cover h-100 w-full rounded-lg shadow-lg">
+  </div>
+  <div class="w-full lg:w-1/2 mb-10 px-4">
+    <div class="bg-card w-full h-full p-6 rounded-lg shadow-lg">
+      <h1 class="hari text-3xl font-bold text-center">Nature</h1>
+      <p class="mt-4 text-white-700">
+Nature      </p>
+      <ul class="mt-2 list-disc list-inside text-white-600">
+        Nature refers to the physical world and everything in it that exists without human intervention, including living organisms, natural resources, and non-living elements. It encompasses ecosystems, biodiversity, and natural processes like the water cycle and photosynthesis, all of which maintain a delicate balance that supports life. Nature provides essential resources such as water, air, and food, and influences climate and weather patterns.
+
+        Humans depend on nature for survival, but activities like pollution and deforestation threaten its stability. Conservation efforts aim to protect ecosystems and promote sustainability, ensuring resources are used responsibly. Nature also holds aesthetic and cultural value, inspiring beauty and creativity.
+      </ul>
+    </div>
+  </div>
+</section>
+</div>
+</section>
+
+
+
+
+  <div>
+    <section class="mt-10 flex flex-wrap -mx-4">
+      <div class="w-full lg:w-1/2 mb-10 px-4">
+        <img src="C:\Users\tkaji\Desktop\ram\image\lyaaa.jpg" alt="Galaxy" class="object-cover h-100 w-full rounded-lg shadow-lg">
+      </div>
+      <div class="w-full lg:w-1/2 mb-10 px-4">
+        <div class="bg-card w-full h-full p-6 rounded-lg shadow-lg">
+          <h1 class="hari text-3xl font-bold text-center">Ecosystem</h1>
+          <p class="mt-4 text-white-700">
+            An ecosystem is a complex and interconnected system of living organisms (plants, animals, microorganisms) and their physical environment (air, water, soil, sunlight), working together to sustain life. Below are the key components and characteristics of an ecosystem:
+        </p>
+        <ul class="mt-2 list-disc list-inside text-white-600">
+            <li><strong>Producers:</strong> Organisms, like plants and algae, that produce energy through photosynthesis and form the base of the food chain.</li>
+            <li><strong>Consumers:</strong> Organisms that rely on other living things for food, including herbivores (plant-eaters), carnivores (meat-eaters), and omnivores (both plant- and meat-eaters).</li>
+            <li><strong>Decomposers:</strong> Organisms such as fungi and bacteria that break down dead material, recycling nutrients back into the soil.</li>
+            <li><strong>Abiotic Factors:</strong> Non-living elements like sunlight, water, air, and temperature, which influence the behavior and growth of organisms within an ecosystem.</li>
+        </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+      <img alt="Solar System" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg shadow-lg" src="C:\Users\tkaji\Desktop\ram\image\solar.jpg">
+      <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        <h1 class="text-white-900 text-3xl title-font font-medium mb-1" id="solar-system">Environment</h1>
+        <p class="mt-4 text-white-700">
+          The environment refers to the surroundings or conditions in which living organisms exist, interact, and develop. It includes both natural elements and human-made components that influence life on Earth. Here are some key characteristics and aspects of the environment:
+      </p>
+      <ul class="mt-2 list-disc list-inside text-white-600">
+          <li><strong>Natural Resources:</strong> The raw materials provided by the Earth, such as water, air, soil, minerals, and plants, that support life and human activities.</li>
+          <li><strong>Air Quality:</strong> The condition of the air we breathe, which is influenced by pollutants like carbon dioxide, nitrogen oxides, and particulate matter, affecting health and climate.</li>
+          <li><strong>Biodiversity:</strong> The variety of life forms, including plants, animals, fungi, and microorganisms, which contribute to ecosystem stability and resilience.</li>
+          <li><strong>Climate:</strong> The long-term weather patterns of a region, including temperature, precipitation, and wind, which significantly impact ecosystems and human activities.</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section>
+      <h1><center>Join us for interactive videos</center></h1>
+  
+      <div class="flex justify-center items-center mt-4">
+        <iframe class="video" src="https://youtu.be/8867p_bJN1Q?si=4TOxlqCMDkfZwwCu" frameborder="0" allowfullscreen style="width: 50vw; height: 50vh; margin: 0 auto;"></iframe>
+      </div>
+      <div>
+        <h1>
+          <center><a href="https://www.youtube.com/@banned-clan16" class="text-x3">Visit our YouTube channel</a></center>
+        </h1>
+      </div>
+    </section>
+    <section id="about" class="bg-gray-100 py-24">
+
+    <footer class="bg-gray-900 text-white body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap text-center md:text-left">
+          <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+            
+            <h2 class="text-2xl font-medium title-font text-gray-100 mb-4" id="contact">About Us</h2>
+            <p class="leading-relaxed text-base text-gray-300">
+              We are a group of environmental enthusiasts committed to raising awareness and inspiring action for the protection of our planet. Our mission is to promote sustainability, educate about climate change and conservation, and empower individuals to make a positive environmental impact for a better future.            </p>
+          </div>
+          
+          <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+            <h2 class="text-2xl font-medium title-font text-gray-100 mb-4">Contact</h2>
+            <p class="leading-relaxed text-base text-gray-300">
+              For inquiries, please reach out to us at: <br>
+              <a href="mailto:tkaji8130@gmail.com" class="text-indigo-400 hover:text-indigo-500">tkaji8130@gmail.com</a>
+            </p>
+          </div>
+        </div>
+    
+      
+    
+        <div class="text-center mt-8">
+          <p class="text-sm text-gray-500">
+            2024 Environment Enthusiasts 
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+  </main>
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function createStars() {
+      const starField = document.createElement('div');
+      for (let i = 0; i < 100; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width; 
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.animationDuration = Math.random() * 2 + 1 + 's';
+        starField.appendChild(star);
+      }
+      document.body.appendChild(starField);
+    }
+
+    createStars(); 
+
+
+    const gallery = document.querySelector('.gallery');
+let startX, currentX, rotateY = 0, isDragging = false;
+
+
+gallery.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX;
+});
+
+window.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        currentX = e.pageX;
+        const deltaX = currentX - startX;
+        rotateY += deltaX * 0.2; // Sensitivity factor for smoother rotation
+        gallery.style.transform = `rotateY(${rotateY}deg)`;
+        startX = currentX; // Update the start point for smooth dragging
+    }
+});
+
+window.addEventListener('mouseup', () => {
+    isDragging = false;
+});
+
+// Touch dragging functionality
+gallery.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].pageX;
+});
+
+window.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+        currentX = e.touches[0].pageX;
+        const deltaX = currentX - startX;
+        rotateY += deltaX * 0.2; // Sensitivity factor for touch rotation
+        gallery.style.transform = `rotateY(${rotateY}deg)`;
+        startX = currentX;
+    }
+});
+
+window.addEventListener('touchend', () => {
+    isDragging = false;
+});
+
+  </script>
+</body>
+</html>
